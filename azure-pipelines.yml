@@ -26,6 +26,6 @@
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-      **/target/*.war
+     **/target/*.war
       *.sql
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
