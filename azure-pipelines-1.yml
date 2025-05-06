@@ -13,7 +13,7 @@ steps:
 
 - task: Maven@4
   inputs:
-    azureSubscription: 'Pay-As-You-Go(1)(d2ce8592-e2e8-487f-9130-e2b5342b5a35)'
+    azureSubscription: 'Pay-As-You-Go(2)(d2ce8592-e2e8-487f-9130-e2b5342b5a35)'
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
