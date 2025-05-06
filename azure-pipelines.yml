@@ -2,7 +2,6 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 - task: Maven@4
   inputs:
     azureSubscription: 'Pay-As-You-Go(d2ce8592-e2e8-487f-9130-e2b5342b5a35)'
@@ -16,16 +15,16 @@
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
+      **/target/*.war
+      *.sql
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-     **/target/*.war
-      *.sql
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
