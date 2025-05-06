@@ -17,7 +17,7 @@ steps:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    testRunTitle: '-DskipITs --setting ./maven/settings.xml'
+    testRunTitle: '-DskipITs --settings ./maven/settings.xml'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
